@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>math6k93 | محوّل الملزمة المكتوبة بخط اليد</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--blue:#2455a6;--navy:#17345f;--pale:#eef4ff;--ink:#202b3c;--muted:#66758b;--line:#dbe4f0;--red:#9e5555}
+*{box-sizing:border-box}body{margin:0;background:#f3f6fb;color:var(--ink);font-family:Cairo,Tahoma,sans-serif}
+header{background:linear-gradient(125deg,#17345f,#2d62b5);color:white;padding:24px max(18px,calc((100% - 1180px)/2));}
+.brand{font-size:12px;letter-spacing:1px;opacity:.85}h1{margin:5px 0;font-size:clamp(23px,4vw,34px)}header p{margin:5px 0 0;opacity:.9}
+main{max-width:1180px;margin:22px auto;padding:0 16px}.notice{background:#fff8e7;border:1px solid #f0d99b;padding:13px 16px;border-radius:12px;margin-bottom:18px;font-size:14px}
+.grid{display:grid;grid-template-columns:340px 1fr;gap:18px}.panel{background:white;border:1px solid var(--line);border-radius:16px;padding:18px;box-shadow:0 5px 18px #1e3a5f0b}.panel h2{font-size:18px;margin:0 0 14px;color:var(--navy)}
+label{display:block;font-weight:700;font-size:13px;margin:12px 0 5px}input,select,textarea{font:inherit;width:100%;border:1px solid #cbd6e5;border-radius:9px;padding:10px;background:#fff;color:var(--ink)}textarea{min-height:280px;line-height:1.9;resize:vertical}
+button{font:inherit;font-weight:700;border:0;border-radius:9px;padding:10px 13px;cursor:pointer}.primary{background:var(--blue);color:white}.secondary{background:var(--pale);color:var(--blue)}.danger{background:#fff0f0;color:#a23e3e}.buttons{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.drop{display:block;border:2px dashed #a9bddb;background:#f8fbff;text-align:center;padding:22px 10px;border-radius:12px;cursor:pointer}.drop input{display:none}.small{font-size:12px;color:var(--muted);line-height:1.7}.files{margin-top:12px;display:grid;gap:8px}.file{display:flex;align-items:center;gap:9px;border:1px solid var(--line);padding:8px;border-radius:9px;font-size:12px}.file img{width:44px;height:54px;object-fit:cover;border-radius:5px}.file span{overflow-wrap:anywhere}
+.tabs{display:flex;gap:7px;margin-bottom:12px;flex-wrap:wrap}.tab{background:#edf1f7;color:#53647c}.tab.active{background:var(--blue);color:white}
+.preview{background:#e8edf5;padding:18px;border-radius:12px;min-height:300px}.paper{background:white;width:min(100%,680px);min-height:420px;margin:auto;padding:34px 38px;border:1px solid #d3dbe7;box-shadow:0 3px 12px #243b5a12;white-space:pre-wrap;line-height:2;font-size:15px}.paperhead{border:2px solid #4775bf;border-radius:8px;padding:8px 12px;text-align:center;font-weight:800;color:#244f91;margin-bottom:20px}.paperfoot{border-top:2px solid #4775bf;margin-top:28px;padding-top:8px;display:flex;justify-content:space-between;gap:8px;font-size:10px;color:#34445e}
+.hidden{display:none}.status{font-size:12px;color:var(--muted);margin-top:8px}.pill{display:inline-block;background:#eaf3ee;color:#246444;border-radius:20px;padding:3px 9px;font-size:11px}
+@media(max-width:800px){.grid{grid-template-columns:1fr}header{padding:20px 16px}.paper{padding:24px 18px}}
+@media print{body{background:white}header, .sidebar,.editor,.notice,.noprint{display:none!important}main{margin:0;padding:0;max-width:none}.grid{display:block}.panel{border:0;box-shadow:none;padding:0}.preview{padding:0;background:white}.paper{width:100%;min-height:0;border:0;box-shadow:none;padding:12mm 13mm;page-break-after:always}.paper:last-child{page-break-after:auto}.paperhead,.paperfoot{print-color-adjust:exact;-webkit-print-color-adjust:exact}@page{size:A4;margin:0}}
+</style>
+</head>
+<body>
+<header><div class="brand">math6k93 · أدوات المعلم</div><h1>محوّل الملزمة المكتوبة بخط اليد</h1><p>حوّل أوراقك إلى ملزمة رقمية قابلة للتحرير والتنسيق والطباعة.</p></header>
+<main>
+<div class="notice"><b>تنبيه للدقة:</b> التعرف الآلي على الخط العربي اليدوي، وخصوصًا المعادلات الرياضية، قد يخطئ. هذه النسخة تتيح رفع الأوراق ومراجعة النص وتنسيقه ومقارنة الأصل قبل الطباعة؛ لا تعتمد أي معادلة قبل تدقيقها.</div>
+<div class="grid">
+<aside class="panel sidebar">
+<h2>١. بيانات الملزمة</h2>
+<label>عنوان الملزمة</label><input id="bookTitle" value="ملزمة الرياضيات">
+<label>الصف الدراسي</label><input id="grade" value="السادس الابتدائي">
+<label>الفصل</label><input id="chapter" value="الفصل الأول – الأعداد الصحيحة">
+<label>اسم المعلم</label><input id="teacher" value="الأستاذ كرار علي كامل">
+<label>قناة التلغرام أو الرابط</label><input id="telegram" value="https://t.me/math6k93">
+<label>حجم الصفحة</label><select id="paperSize"><option>A4</option><option>A3</option></select>
+<h2 style="margin-top:22px">٢. رفع الأوراق الأصلية</h2>
+<label class="drop">📷 اضغط لاختيار صور أو ملف PDF<input id="uploads" type="file" accept="image/*,.pdf" multiple><span class="small">يمكن اختيار عدة صور من الهاتف أو الحاسوب</span></label>
+<div id="fileList" class="files"></div><div class="status" id="uploadStatus">لم تُرفع ملفات بعد.</div>
+<div class="buttons"><button class="secondary" id="clearFiles">إزالة الصور</button><button class="secondary" id="saveDraft">حفظ النص في هذا المتصفح</button></div>
+<p class="small">تُعرض الصور محليًا داخل الصفحة. لا تُرفع تلقائيًا إلى خادم.</p>
+</aside>
+<section class="panel editor">
+<h2>٣. تحرير النص ومراجعته</h2>
+<div class="tabs"><button class="tab active" data-tab="textTab">النص المستخرج/المكتوب</button><button class="tab" data-tab="sourceTab">الأوراق الأصلية</button><button class="tab" data-tab="previewTab">معاينة الطباعة</button></div>
+<div id="textTab">
+<label>عنوان الدرس</label><input id="lesson" value="الأعداد الصحيحة وتمثيلها على مستقيم الأعداد">
+<label>النص التعليمي (عدّله بعد مراجعة الورقة الأصلية)</label>
+<textarea id="content" placeholder="اكتب النص المستخرج هنا أو الصقه، ثم راجع الأعداد والإشارات والكسور بعناية.">الأعداد الموجبة: هي أعداد أكبر من الصفر، وتكتب مسبوقة بإشارة (+) أو دونها، وتقع على يمين الصفر من مستقيم الأعداد.
+
+الأعداد السالبة: هي أعداد أصغر من الصفر، وتكتب مسبوقة بإشارة (-)، وتقع على يسار الصفر من مستقيم الأعداد.
+
+الأعداد الصحيحة: هي الأعداد الموجبة والأعداد السالبة والصفر.
+
+الكلمات التي تدل على الأعداد الموجبة:
+(فوق، ربح، ارتفاع، ملك، توفير، إيداع، صعود).
+
+الكلمات التي تدل على الأعداد السالبة:
+(تحت، خسارة، انخفاض، تسرب، حرق، سحب، نزول).
+
+ملاحظة: عند تمثيل الأعداد الصحيحة على مستقيم الأعداد، نرسم المستقيم ونحدد الصفر أولًا، ثم نتحرك إلى اليمين للأعداد الموجبة وإلى اليسار للأعداد السالبة بمقدار العدد المراد تمثيله.
+
+مراجعة ضرورية: قارن النص أعلاه بالصور الأصلية، وخصوصًا الأرقام والإشارات والأمثلة الحسابية قبل اعتماد الملزمة.</textarea>
+<div class="buttons"><button class="primary" id="updatePreview">تحديث المعاينة</button><button class="secondary" id="copyText">نسخ النص</button><button class="secondary" id="downloadText">تنزيل النص TXT</button></div>
+<p class="small">هذه عينة نصية أولية للتجربة وليست تفريغًا كاملًا أو معتمدًا لكل الصور المرفوعة.</p>
+</div>
+<div id="sourceTab" class="hidden"><p class="small">تظهر الصور المختارة أدناه. كبّر كل صورة وقارنها بالنص، خاصةً الإشارات السالبة وترتيب الأعداد في مستقيم الأعداد.</p><div id="sourceGallery" class="files"></div></div>
+<div id="previewTab" class="hidden"><div class="preview"><article class="paper" id="paperPreview"></article></div><div class="buttons noprint"><button class="primary" id="printBtn">طباعة / حفظ PDF</button></div></div>
+</section>
+</div>
+</main>
+<script>
+const $=id=>document.getElementById(id);let files=[];
+function meta(){return {title:$('bookTitle').value,grade:$('grade').value,chapter:$('chapter').value,teacher:$('teacher').value,telegram:$('telegram').value,lesson:$('lesson').value,content:$('content').value};}
+function renderFiles(){const list=$('fileList'),gal=$('sourceGallery');list.innerHTML='';gal.innerHTML='';files.forEach((f,i)=>{const row=document.createElement('div');row.className='file';if(f.url){const im=document.createElement('img');im.src=f.url;row.append(im)}const s=document.createElement('span');s.textContent=f.name;row.append(s);list.append(row);if(f.url){const a=document.createElement('a');a.href=f.url;a.target='_blank';a.style.display='block';a.style.margin='8px 0';const im=document.createElement('img');im.src=f.url;im.style.cssText='max-width:100%;max-height:420px;object-fit:contain;border:1px solid #dbe4f0;border-radius:8px';a.append(im);gal.append(a)}});$('uploadStatus').textContent=files.length?`تم اختيار ${files.length} ملف/ملفات. راجع كل صفحة يدويًا.`:'لم تُرفع ملفات بعد.';}
+$('uploads').addEventListener('change',e=>{files.forEach(f=>f.url&&URL.revokeObjectURL(f.url));files=Array.from(e.target.files).map(f=>({name:f.name,type:f.type,url:f.type.startsWith('image/')?URL.createObjectURL(f):null}));renderFiles();});
+$('clearFiles').onclick=()=>{files.forEach(f=>f.url&&URL.revokeObjectURL(f.url));files=[];$('uploads').value='';renderFiles()};
+function update(){const m=meta(),p=$('paperPreview');p.innerHTML='';const h=document.createElement('div');h.className='paperhead';h.textContent=m.title+' — '+m.grade+' — '+m.chapter;p.append(h);const l=document.createElement('h3');l.textContent=m.lesson;l.style.cssText='color:#244f91;text-align:center;font-size:20px';p.append(l);const body=document.createElement('div');body.textContent=m.content;body.style.whiteSpace='pre-wrap';p.append(body);const foot=document.createElement('div');foot.className='paperfoot';[m.telegram,m.teacher,'رياضيات المرحلة الابتدائية'].forEach(t=>{const s=document.createElement('span');s.textContent=t;foot.append(s)});p.append(foot);document.querySelectorAll('.paper').forEach(el=>el.style.setProperty('--paper-size',$('paperSize').value));}
+$('updatePreview').onclick=()=>{update();document.querySelectorAll('.tab').forEach(b=>b.classList.toggle('active',b.dataset.tab==='previewTab'));['textTab','sourceTab','previewTab'].forEach(id=>$(id).classList.toggle('hidden',id!=='previewTab'));};
+document.querySelectorAll('.tab').forEach(b=>b.onclick=()=>{document.querySelectorAll('.tab').forEach(x=>x.classList.toggle('active',x===b));['textTab','sourceTab','previewTab'].forEach(id=>$(id).classList.toggle('hidden',id!==b.dataset.tab));if(b.dataset.tab==='previewTab')update()});
+$('printBtn').onclick=()=>{update();window.print()};
+$('copyText').onclick=async()=>{try{await navigator.clipboard.writeText($('content').value);alert('تم نسخ النص.')}catch(e){$('content').select();alert('حدد النص ثم انسخه يدويًا.')}};
+$('downloadText').onclick=()=>{const blob=new Blob([$('content').value],{type:'text/plain;charset=utf-8'}),a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='matn-almulazama.txt';a.click();URL.revokeObjectURL(a.href)};
+$('saveDraft').onclick=()=>{try{localStorage.setItem('math6k93Draft',JSON.stringify(meta()));alert('تم حفظ النص والبيانات في هذا المتصفح.')}catch(e){alert('تعذر الحفظ في المتصفح.')}};
+try{const d=JSON.parse(localStorage.getItem('math6k93Draft')||'null');if(d){['bookTitle','grade','chapter','teacher','telegram','lesson','content'].forEach(k=>{if(d[k])$(k).value=d[k]})}}catch(e){}
+update();
+</script>
+</body></html>
